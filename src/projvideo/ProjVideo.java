@@ -7,7 +7,7 @@ package projvideo;
 
 /**
  *
- * @author ti
+ * @author Rafael
  */
 public class ProjVideo {
 
@@ -15,7 +15,11 @@ public class ProjVideo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        //VIDEO implementa AcoesVideo
+        Video v1 = new Video("Filme Click", 10, 99, 5, false);
+        v1.teste();
+        
     }
     
 }
