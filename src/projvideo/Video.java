@@ -32,11 +32,11 @@ public class Video implements AcoesVideo {
     
     //mensagem
     public void imp(String texto){
-        System.err.println(texto);
+        System.out.println(texto);
     }
     
     public void teste(){
-        imp("=== TESTE VIDEO ===");
+        imp("=== TESTE CLASSE VIDEO ===");
         play();
         pause();
         like();
@@ -48,19 +48,19 @@ public class Video implements AcoesVideo {
     @Override
     public void play() {
         this.setReproduzir(true);
-        imp("play");
+        imp("Vídeo play: STATUS " + this.getReproduzir());
     }
 
     @Override
     public void pause() {
         this.setReproduzir(false);
-        imp("pause");
+        imp("Vídeo parado: STATUS " + this.getReproduzir());
     }
 
     @Override
     public void like() {
         this.setCurtidas(getCurtidas()+1);
-        imp("like");
+        imp("Ganhou um like: " + this.getCurtidas());
     }
 
     
