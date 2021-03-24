@@ -30,6 +30,7 @@ public class Video implements AcoesVideo {
         setReproduzir(oReproduzir);
     }
     
+    //pode ser criado com overide de toString (Inserir código)
     //mensagem
     public void imp(String texto){
         System.out.println(texto);

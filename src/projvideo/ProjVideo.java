@@ -22,13 +22,14 @@ public class ProjVideo {
         
         //UsoPessoa estende a abstrata Pessoa
         //UsoPessoa p1 = new UsoPessoa("Login Rafal", 1);
-        UsoPessoa p1 = new UsoPessoa("Login Rafal", 1, "Pessoa Rafael", "M", 0);
         
+        //!! Construtor incorreto
+        //UsoPessoa p1 = new UsoPessoa("Login Rafal", 1, "Pessoa Rafael", "M", 0);
         
-        //superclasse
+        UsoPessoa p1 = new UsoPessoa("Login Rafael", "Nome Rafael", 23, "M");
+        //superclasse abstrata
         p1.teste(); 
         p1.ganhaXp();
-        
         //subclasse
         p1.testeSub(); 
         p1.viuMaisUm();

@@ -23,7 +23,20 @@ public class UsoPessoa extends Pessoa{
     private int totAssis;
     
     //construtor
+    
+    //modo correto do construtor 
+    public UsoPessoa(String login, String nome, int idade, String sexo) {
+        super(nome, idade, sexo);
+        this.login = login;
+        this.totAssis = 0; //sem parametro
+        ver();
+    }
 
+    
+    
+    /*
+    //construtor SUPER
+    //public Pessoa(String nome, int idade, String sexo) {
     //public UsoPessoa(String login, int totAssis) {
     public UsoPessoa(String login, int totAssis, String nome, 
                         String sexo, int xp) {
@@ -37,6 +50,7 @@ public class UsoPessoa extends Pessoa{
         imp("=== CONSTRUTOR 'UsoPessoa'");
         ver();
     }
+*/
     
     //teste
     public void testeSub(){

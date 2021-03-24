@@ -17,6 +17,15 @@ public abstract class Pessoa {
     protected String sexo;
     protected int xp;
     
+    //construtor SUPER
+    public Pessoa(String nome, int idade, String sexo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+        this.xp = 0; // sem parâmetro
+    }
+    
+    
     //metodos
     protected void ganhaXp(){
         this.setXp(getXp()+100);
