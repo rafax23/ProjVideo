@@ -7,8 +7,51 @@ package projvideo;
 
 /**
  *
- * @author ti
+ * @author Rafael
  */
 public class Visualizacao {
     
+    private UsoPessoa espectador; //A subclasse
+    private Video filme;
+    
+    public void avaliar(){}
+    
+    //toString
+    @Override
+    public String toString() {
+        return "=== Visualizacao{" + "\nespectador=" + espectador + "\nfilme=" + filme + '}';
+    }
+    
+    
+    //construtor    
+
+    public Visualizacao(UsoPessoa espectador, Video filme) {
+        this.espectador = espectador;
+        this.filme = filme;
+        this.espectador.setTotAssis(this.espectador.getTotAssis()+1);
+        this.filme.setViewes(this.filme.getViewes()+1);
+    }
+    
+    
+    //getter setter
+
+    public Pessoa getEspectador() {
+        return espectador;
+    }
+
+    public void setEspectador(UsoPessoa espectador) {
+        this.espectador = espectador;
+    }
+
+    public Video getFilme() {
+        return filme;
+    }
+
+    public void setFilme(Video filme) {
+        this.filme = filme;
+    }
+    
+    
+    
+        
 }

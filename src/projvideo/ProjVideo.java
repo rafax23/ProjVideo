@@ -23,7 +23,7 @@ public class ProjVideo {
         //UsoPessoa estende a abstrata Pessoa
         //UsoPessoa p1 = new UsoPessoa("Login Rafal", 1);
         
-        //!! Construtor incorreto
+        //!! Construtor incorreto pois não usou o construtor na Super
         //UsoPessoa p1 = new UsoPessoa("Login Rafal", 1, "Pessoa Rafael", "M", 0);
         
         UsoPessoa p1 = new UsoPessoa("Login Rafael", "Nome Rafael", 23, "M");
@@ -34,6 +34,15 @@ public class ProjVideo {
         p1.testeSub(); 
         p1.viuMaisUm();
         p1.ver();
+        
+        //Visualizacao agrega as duas classes
+        //p1 e v1 são objetos, para o toString de Visualização funcionar
+        //precisa ter toString dentro de UsoPessoa e de Video
+        //se não, retorna o nome do objetoda na memória e aí... 
+        //tem que acessar os getters de cada classe para pegar os nomes
+        Visualizacao ver1 = new Visualizacao(p1,v1);
+        System.out.println(ver1.toString());
+        
         
         
         

@@ -26,11 +26,20 @@ public class UsoPessoa extends Pessoa{
     
     //modo correto do construtor 
     public UsoPessoa(String login, String nome, int idade, String sexo) {
+        //super é a superclasse que estende 
         super(nome, idade, sexo);
         this.login = login;
         this.totAssis = 0; //sem parametro
         ver();
     }
+    
+    
+    //toString
+    @Override
+    public String toString() {
+        return "UsoPessoa{" + "login=" + login + ", totAssis=" + totAssis + '}';
+    }
+    
 
     
     
@@ -50,7 +59,7 @@ public class UsoPessoa extends Pessoa{
         imp("=== CONSTRUTOR 'UsoPessoa'");
         ver();
     }
-*/
+    */
     
     //teste
     public void testeSub(){
@@ -66,7 +75,6 @@ public class UsoPessoa extends Pessoa{
                 + "\nXp: " + getXp()
         );
     }
-    
     
     //metodos
     public void viuMaisUm(){
@@ -92,11 +100,5 @@ public class UsoPessoa extends Pessoa{
         this.totAssis = totAssis;
     }
     
-    
-    
-    
-    
-    
-    
-    
+  
 }

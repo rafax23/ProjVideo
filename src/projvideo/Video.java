@@ -30,6 +30,14 @@ public class Video implements AcoesVideo {
         setReproduzir(oReproduzir);
     }
     
+    //toString
+    
+    @Override
+    public String toString() {
+        return "Video{" + "titulo=" + titulo + ", avaliacao=" + avaliacao + ", viewes=" + viewes + ", curtidas=" + curtidas + ", reproduzir=" + reproduzir + '}';
+    }
+        
+    
     //pode ser criado com overide de toString (Inserir código)
     //mensagem
     public void imp(String texto){
