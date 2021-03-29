@@ -17,7 +17,8 @@ public class ProjVideo {
     public static void main(String[] args) {
         
         //VIDEO implementa inteface AcoesVideo
-        Video v1 = new Video("Filme Click", 10, 99, 5, false);
+        //String oTitulo, float oAvaliacao, int oViewes, int oCurtidas, boolean oReproduzir
+        Video v1 = new Video("Filme Click", 1, 99, 5, false);
         v1.teste();
         
         //UsoPessoa estende a abstrata Pessoa
@@ -43,6 +44,8 @@ public class ProjVideo {
         Visualizacao ver1 = new Visualizacao(p1,v1);
         System.out.println(ver1.toString());
         
+        ver1.avaliar(87f);
+        System.out.println(ver1.toString());
         
         
         

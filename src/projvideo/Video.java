@@ -14,7 +14,7 @@ public class Video implements AcoesVideo {
     
     //atributos
     private String titulo;
-    private int avaliacao;
+    private double avaliacao;
     private int viewes;
     private int curtidas;
     private boolean reproduzir;
@@ -22,7 +22,7 @@ public class Video implements AcoesVideo {
     
     //construtor
 
-    public Video(String oTitulo, int oAvaliacao, int oViewes, int oCurtidas, boolean oReproduzir){
+    public Video(String oTitulo, double oAvaliacao, int oViewes, int oCurtidas, boolean oReproduzir){
         setTitulo(oTitulo);
         setAvaliacao(oAvaliacao);
         setViewes(oViewes);
@@ -82,12 +82,15 @@ public class Video implements AcoesVideo {
         this.titulo = titulo;
     }
 
-    public int getAvaliacao() {
+    public double getAvaliacao() {
         return avaliacao;
     }
 
-    public final void setAvaliacao(int avaliacao) {
-        this.avaliacao = avaliacao;
+    public final void setAvaliacao(double avaliacao) {
+        double nova;
+        nova = (double)((this.avaliacao + avaliacao)/this.viewes);
+        this.avaliacao = nova;
+        //this.avaliacao = avaliacao;
     }
 
     public int getViewes() {

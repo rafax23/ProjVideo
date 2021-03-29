@@ -14,8 +14,7 @@ public class Visualizacao {
     private UsoPessoa espectador; //A subclasse
     private Video filme;
     
-    public void avaliar(){}
-    
+      
     //toString
     @Override
     public String toString() {
@@ -31,6 +30,27 @@ public class Visualizacao {
         this.espectador.setTotAssis(this.espectador.getTotAssis()+1);
         this.filme.setViewes(this.filme.getViewes()+1);
     }
+    
+    //metodos
+    public void avaliar(){
+        this.filme.setAvaliacao(5);
+    }
+    
+    public void avaliar(int nota){
+        this.filme.setAvaliacao(nota);
+    }
+    
+    public void avaliar(float porc){ //o tipo do parametro precisa ser diferente 
+        int tot = 0;
+        if (porc <= 30){
+            tot = 4;
+        }else if (porc <= 50){
+            tot = 6;
+        }else
+            tot = 10;
+    }
+    
+    
     
     
     //getter setter
